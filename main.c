@@ -15,7 +15,7 @@ int main() {
 	
 	struct Estudante estudante[10];
 	
-	for (i; i<2; i++){
+	for (i; i<10; i++){
 		printf(">>> ALUNO %d\n", i+1);
 		printf("Matricula aluno %d: ", i+1);
 		scanf("%d", &estudante[i].matricula);
@@ -35,18 +35,24 @@ int main() {
 		
 	}
 	
-	for (i = 0; i<2; i++){
+	system("cls");
+	
+	for (i = 0; i<10; i++){
 		printf("ALUNO %d\n", i+1);
+		printf("~~~~~~~\n");
 		printf("Matricula: %d\n", estudante[i].matricula);
-		printf("Nome%s\n", estudante[i].nome);
+		printf("Nome: %s\n", estudante[i].nome);
+		
 		for (j=0; j<4; j++){
 			printf("N%d: %.1f\n", j+1, estudante[i].notas[j]);
 		}
-		printf("Media%.2f\n", estudante[i].media);
+		
+		printf("Media: %.2f\n", estudante[i].media);
 		printf("-----------------------\n");
 		media_turma = media_turma + estudante[i].media;
 	}
-	media_turma = media_turma / 2;
+	
+	media_turma = media_turma / 10;
 	printf("Media da turma: %.1f", media_turma);
 	
 	return 0;
